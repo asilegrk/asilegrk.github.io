@@ -4,17 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Asile Gerek | Computer Vision & AI Researcher</title>
+  <title>Asile Gerek</title>
 
   <style>
     :root {
-      --text: #1f2937;
-      --muted: #6b7280;
+      --text: #111827;
+      --muted: #4b5563;
       --link: #2563eb;
-      --background: #ffffff;
-      --soft-background: #f8fafc;
       --border: #e5e7eb;
-      --card: #ffffff;
+      --background: #ffffff;
     }
 
     * {
@@ -26,7 +24,8 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       color: var(--text);
       background: var(--background);
-      line-height: 1.65;
+      line-height: 1.6;
+      font-size: 16px;
     }
 
     a {
@@ -39,289 +38,171 @@
     }
 
     .container {
-      max-width: 980px;
+      max-width: 850px;
       margin: 0 auto;
-      padding: 48px 24px;
+      padding: 56px 24px;
     }
 
-    .hero {
+    .intro {
       display: grid;
-      grid-template-columns: 1fr 210px;
-      gap: 48px;
+      grid-template-columns: 1fr 150px;
+      gap: 40px;
       align-items: center;
-      padding-top: 64px;
-      padding-bottom: 40px;
+      margin-bottom: 48px;
     }
 
-    .hero h1 {
-      font-size: 42px;
-      line-height: 1.15;
-      margin: 0 0 10px;
-      color: #111827;
+    h1 {
+      font-size: 40px;
+      margin: 0 0 8px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
     }
 
     .subtitle {
-      font-size: 21px;
-      color: #374151;
-      margin: 0 0 22px;
-      font-weight: 500;
-    }
-
-    .bio {
-      font-size: 17px;
-      margin-bottom: 16px;
-    }
-
-    .quick-links {
-      margin-top: 18px;
-      font-size: 16px;
-    }
-
-    .quick-links a {
-      margin-right: 12px;
-      font-weight: 600;
-    }
-
-    .profile-placeholder {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #dbeafe, #f3f4f6);
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 54px;
-      font-weight: 700;
-      color: #1e3a8a;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
-    }
-
-    nav {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--soft-background);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    nav .nav-inner {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 12px 24px;
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      font-weight: 600;
-      color: #1d4ed8;
-      font-size: 15px;
-    }
-
-    section {
-      padding: 34px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    section:last-child {
-      border-bottom: none;
-    }
-
-    h2 {
-      font-size: 28px;
-      margin: 0 0 18px;
-      color: #111827;
-    }
-
-    h3 {
       font-size: 20px;
-      margin: 0 0 8px;
-      color: #111827;
+      color: var(--muted);
+      margin: 0 0 20px;
     }
 
     p {
       margin-top: 0;
     }
 
-    .news-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .links {
+      margin-top: 16px;
+      font-size: 16px;
     }
 
-    .news-list li {
-      margin-bottom: 12px;
+    .links a {
+      margin-right: 10px;
+      font-weight: 500;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #f3f4f6;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      font-weight: 700;
+      color: #374151;
+    }
+
+    section {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+    }
+
+    h2 {
+      font-size: 25px;
+      margin: 0 0 16px;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 0 0 6px;
+      font-weight: 650;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .news {
+      list-style: none;
       padding-left: 0;
+    }
+
+    .news li {
+      margin-bottom: 10px;
     }
 
     .date {
       font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-      color: #111827;
-      font-weight: 600;
-      margin-right: 8px;
-      white-space: nowrap;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 22px;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
-    }
-
-    .card p {
-      margin-bottom: 10px;
-    }
-
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 0;
-      margin: 14px 0 0;
-      list-style: none;
-    }
-
-    .tag-list li {
-      background: #eff6ff;
-      color: #1e40af;
-      border: 1px solid #dbeafe;
-      padding: 5px 10px;
-      border-radius: 999px;
       font-size: 14px;
-      font-weight: 500;
+      color: var(--muted);
+      margin-right: 8px;
     }
 
-    .muted {
+    .project {
+      margin-bottom: 24px;
+    }
+
+    .note {
       color: var(--muted);
       font-size: 15px;
     }
 
-    .skills {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .skill-block {
-      background: var(--soft-background);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-    }
-
-    .skill-block strong {
-      display: block;
-      margin-bottom: 8px;
-      color: #111827;
-    }
-
-    .cv-box {
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 22px;
-    }
-
     footer {
-      text-align: center;
       color: var(--muted);
       font-size: 14px;
-      padding: 32px 24px 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
     }
 
-    @media (max-width: 760px) {
-      .hero {
+    @media (max-width: 700px) {
+      .intro {
         grid-template-columns: 1fr;
-        text-align: left;
-        padding-top: 36px;
       }
 
-      .profile-placeholder {
-        width: 150px;
-        height: 150px;
-        font-size: 42px;
-      }
-
-      .hero h1 {
+      .avatar {
+        width: 120px;
+        height: 120px;
         font-size: 34px;
       }
 
-      .subtitle {
-        font-size: 19px;
-      }
-
-      .grid,
-      .skills {
-        grid-template-columns: 1fr;
+      h1 {
+        font-size: 34px;
       }
     }
   </style>
 </head>
 
 <body>
-
   <main class="container">
 
-    <header class="hero">
+    <header class="intro">
       <div>
         <h1>Asile Gerek</h1>
         <p class="subtitle">Computer Vision & AI Researcher</p>
 
-        <p class="bio">
+        <p>
           I recently completed my M.Sc. in Computer Science with a specialization
           in Artificial Intelligence at the University of Würzburg. My work focuses
           on efficient computer vision models for image enhancement, restoration,
           color manipulation, and perceptual image quality.
         </p>
 
-        <p class="bio">
+        <p>
           I previously worked as a Student Research Assistant at the Computer Vision
-          Lab, University of Würzburg, contributing to research on lightweight and
-          efficient vision models.
+          Lab, University of Würzburg.
         </p>
 
-        <div class="quick-links">
-          <a href="https://github.com/asilegrk" target="_blank">GitHub</a>
-          <a href="#" target="_blank">LinkedIn</a>
-          <a href="#cv">CV</a>
+        <div class="links">
+          <a href="https://github.com/asilegrk" target="_blank">GitHub</a> /
+          <a href="#" target="_blank">LinkedIn</a> /
+          <a href="#cv">CV</a> /
           <a href="#contact">Mail</a>
         </div>
       </div>
 
-      <div class="profile-placeholder">
-        AG
-      </div>
+      <div class="avatar">AG</div>
     </header>
-
-  </main>
-
-  <nav>
-    <div class="nav-inner">
-      <a href="#news">News</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#cv">CV</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <main class="container">
 
     <section id="news">
       <h2>News</h2>
-      <ul class="news-list">
+      <ul class="news">
         <li>
           <span class="date">[Jan 2026]</span>
           Completed my M.Sc. in Computer Science at the University of Würzburg.
@@ -339,151 +220,68 @@
 
     <section id="research">
       <h2>Research Interests</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Efficient Vision Models</h3>
-          <p>
-            Lightweight deep learning models for practical image enhancement,
-            restoration, and high-resolution inference.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Image Enhancement & Restoration</h3>
-          <p>
-            Methods for improving visual quality, color appearance, perceptual
-            fidelity, and robustness of images.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Text-guided Visual Editing</h3>
-          <p>
-            Controllable image editing approaches that connect natural-language
-            guidance with efficient visual transformations.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Perceptual Image Quality</h3>
-          <p>
-            Evaluation of image enhancement methods using perceptual and fidelity
-            metrics such as LPIPS, PSNR, SSIM, and color difference measures.
-          </p>
-        </div>
-      </div>
+      <ul>
+        <li>Computer Vision</li>
+        <li>Image Enhancement and Restoration</li>
+        <li>Text-guided Visual Editing</li>
+        <li>3D LUT-based Color Manipulation</li>
+        <li>Efficient Deep Learning Models</li>
+        <li>Perceptual Image Quality Assessment</li>
+      </ul>
     </section>
 
     <section id="projects">
       <h2>Selected Projects</h2>
 
-      <div class="card">
+      <div class="project">
         <h3>PICE: Text-guided Portrait Color Enhancement</h3>
         <p>
           A lightweight framework for text-guided portrait color enhancement using
           3D LUT supervision. The project focuses on efficient high-resolution image
           enhancement, perceptual color fidelity, and practical inference speed.
         </p>
-        <p class="muted">
+        <p class="note">
           Full implementation is not publicly available due to publication and
           institutional constraints. A public project summary will be added soon.
         </p>
-
-        <ul class="tag-list">
-          <li>Computer Vision</li>
-          <li>PyTorch</li>
-          <li>3D LUTs</li>
-          <li>Image Enhancement</li>
-          <li>Efficient Models</li>
-        </ul>
       </div>
 
-      <div class="card">
+      <div class="project">
         <h3>Image Quality Assessment Experiments</h3>
         <p>
           Experiments with perceptual and fidelity metrics for evaluating image
-          enhancement and restoration methods, including PSNR, SSIM, LPIPS, and
-          color difference metrics.
+          enhancement methods, including PSNR, SSIM, LPIPS, and color difference metrics.
         </p>
-
-        <ul class="tag-list">
-          <li>Image Quality</li>
-          <li>LPIPS</li>
-          <li>PSNR</li>
-          <li>SSIM</li>
-          <li>DeltaE</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2>Technical Skills</h2>
-
-      <div class="skills">
-        <div class="skill-block">
-          <strong>Programming</strong>
-          Python, C/C++, Java, SQL
-        </div>
-
-        <div class="skill-block">
-          <strong>Deep Learning</strong>
-          PyTorch, TensorFlow, model training, evaluation pipelines
-        </div>
-
-        <div class="skill-block">
-          <strong>Computer Vision</strong>
-          OpenCV, image enhancement, restoration, super-resolution, perceptual metrics
-        </div>
-
-        <div class="skill-block">
-          <strong>Tools & Workflow</strong>
-          Git, Linux, Slurm, LaTeX, experiment tracking, GPU-based experimentation
-        </div>
       </div>
     </section>
 
     <section id="cv">
       <h2>CV</h2>
-
-      <div class="cv-box">
-        <p>
-          My CV is available upon request. A downloadable version will be added soon.
-        </p>
-        <p class="muted">
-          I am currently interested in Computer Vision, AI Engineering, Machine Learning,
-          and research-oriented roles in Germany.
-        </p>
-      </div>
+      <p>
+        My CV is available upon request. A downloadable version will be added soon.
+      </p>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-
       <p>
         Email:
         <a href="mailto:your.email@example.com">your.email@example.com</a>
       </p>
-
       <p>
         GitHub:
-        <a href="https://github.com/asilegrk" target="_blank">
-          github.com/asilegrk
-        </a>
+        <a href="https://github.com/asilegrk" target="_blank">github.com/asilegrk</a>
       </p>
-
       <p>
         LinkedIn:
-        <a href="#" target="_blank">
-          LinkedIn Profile
-        </a>
+        <a href="#" target="_blank">LinkedIn Profile</a>
       </p>
     </section>
 
+    <footer>
+      © 2026 Asile Gerek
+    </footer>
+
   </main>
-
-  <footer>
-    © 2026 Asile Gerek
-  </footer>
-
 </body>
 </html>
