@@ -4,19 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Asile Gerek</title>
+  <meta
+    name="description"
+    content="Asile Gerek - Computer Vision Engineer and Researcher. Deep learning, visual perception, industrial vision, multimodal vision and efficient AI."
+  />
+
+  <title>Asile Gerek | Computer Vision Engineer</title>
 
   <style>
     :root {
       --text: #111827;
       --muted: #4b5563;
+      --light-muted: #6b7280;
       --link: #2563eb;
       --border: #e5e7eb;
       --background: #ffffff;
+      --surface: #f9fafb;
+      --tag-bg: #f3f4f6;
     }
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -25,7 +37,7 @@
       color: var(--text);
       background: var(--background);
       line-height: 1.65;
-      font-size: 15px;
+      font-size: 15.5px;
     }
 
     a {
@@ -38,44 +50,55 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 940px;
       margin: 0 auto;
-      padding: 48px 24px;
+      padding: 50px 26px;
     }
+
+    /* ============================================================
+       INTRO
+    ============================================================ */
 
     .intro {
       display: grid;
       grid-template-columns: 1fr 150px;
-      gap: 40px;
+      gap: 44px;
       align-items: center;
       margin-bottom: 48px;
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 42px;
+      line-height: 1.15;
       margin: 0 0 8px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-weight: 730;
+      letter-spacing: -0.03em;
     }
 
     .subtitle {
       font-size: 20px;
       color: var(--muted);
-      margin: 0 0 20px;
+      margin: 0 0 22px;
+      font-weight: 450;
     }
 
     p {
       margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    .interests {
+      margin-top: 18px;
     }
 
     .links {
-      margin-top: 16px;
+      margin-top: 20px;
       font-size: 16px;
     }
 
     .links a {
-      margin-right: 10px;
-      font-weight: 500;
+      margin-right: 8px;
+      font-weight: 550;
     }
 
     .avatar {
@@ -92,78 +115,175 @@
       color: #374151;
     }
 
+    /* ============================================================
+       SECTIONS
+    ============================================================ */
+
     section {
       border-top: 1px solid var(--border);
-      padding: 30px 0;
+      padding: 32px 0;
     }
 
     h2 {
-      font-size: 25px;
-      margin: 0 0 16px;
-      font-weight: 650;
-      letter-spacing: -0.01em;
+      font-size: 26px;
+      margin: 0 0 20px;
+      font-weight: 680;
+      letter-spacing: -0.02em;
     }
 
     h3 {
       font-size: 18px;
-      margin: 0 0 6px;
-      font-weight: 650;
+      margin: 0 0 5px;
+      font-weight: 680;
     }
 
-    ul {
-      padding-left: 20px;
-      margin-top: 0;
+    .meta {
+      color: var(--light-muted);
+      font-size: 14px;
+      margin-bottom: 9px;
     }
 
-    li {
-      margin-bottom: 8px;
-    }
+    /* ============================================================
+       NEWS
+    ============================================================ */
 
     .news {
       list-style: none;
       padding-left: 0;
+      margin: 0;
     }
 
     .news li {
-      margin-bottom: 10px;
+      margin-bottom: 11px;
     }
 
     .date {
       font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-      font-size: 14px;
+      font-size: 13.5px;
       color: var(--muted);
       margin-right: 8px;
     }
 
+    /* ============================================================
+       PROJECTS
+    ============================================================ */
+
     .project {
-      margin-bottom: 24px;
+      margin-bottom: 30px;
+    }
+
+    .project:last-child {
+      margin-bottom: 0;
+    }
+
+    .project p {
+      margin-bottom: 10px;
+    }
+
+    .project ul {
+      margin-top: 7px;
+      margin-bottom: 8px;
     }
 
     .note {
       color: var(--muted);
-      font-size: 15px;
     }
+
+    /* ============================================================
+       TAGS
+    ============================================================ */
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 3px 8px;
+      font-size: 12.5px;
+      color: #374151;
+    }
+
+    /* ============================================================
+       SKILLS
+    ============================================================ */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      row-gap: 13px;
+      column-gap: 20px;
+    }
+
+    .skill-title {
+      font-weight: 650;
+    }
+
+    .skill-content {
+      color: var(--muted);
+    }
+
+    /* ============================================================
+       PUBLICATIONS
+    ============================================================ */
+
+    .publication {
+      margin-bottom: 18px;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
 
     footer {
       color: var(--muted);
       font-size: 14px;
-      padding-top: 24px;
+      padding-top: 25px;
       border-top: 1px solid var(--border);
     }
 
+    /* ============================================================
+       MOBILE
+    ============================================================ */
+
     @media (max-width: 700px) {
+      .container {
+        padding: 32px 20px;
+      }
+
       .intro {
         grid-template-columns: 1fr;
+        gap: 25px;
       }
 
       .avatar {
-        width: 120px;
-        height: 120px;
-        font-size: 34px;
+        width: 115px;
+        height: 115px;
+        font-size: 33px;
+        order: -1;
       }
 
       h1 {
-        font-size: 34px;
+        font-size: 35px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+        row-gap: 4px;
+      }
+
+      .skill-content {
+        margin-bottom: 12px;
       }
     }
   </style>
@@ -172,123 +292,338 @@
 <body>
   <main class="container">
 
+    <!-- ============================================================
+         INTRO
+    ============================================================ -->
+
     <header class="intro">
       <div>
         <h1>Asile Gerek</h1>
-        <p class="subtitle">Computer Vision & AI Researcher</p>
-        <p>
-          I'm a Computer Vision researcher with an M.Sc. in Computer Science,from the University of Würzburg. During my Master's studies(2023-2026),
-          I worked at the Computer Vision Lab under the supervision of Prof. Dr. Radu Timofte and Dr. Marcos V. Conde, focusing on efficient image enhancement,
-          restoration, and text-guided visual editing.          
-        </p>
-        
-        <p>
-          My recent work explores lightweight neural models for portrait color enhancement
-          using 3D LUT supervision, with an emphasis on high-resolution inference,
-          perceptual image quality, and practical deployment.
-        </p>
-        
-        <p>
-          I'm interested in building efficient and controllable visual AI systems for
-          real-world imaging applications.
-        </p>
-        <p class="interests">
-        <strong>Research interests:</strong> image enhancement, image restoration,
-        text-guided visual editing, 3D LUT-based color manipulation, efficient vision models,
-        and perceptual image quality.
+
+        <p class="subtitle">
+          Computer Vision Engineer & Researcher
         </p>
 
+        <p>
+          I'm a Computer Vision Engineer with an M.Sc. in Computer Science from the
+          University of Würzburg. My background combines more than two years of
+          computer vision research with hands-on experience developing and integrating
+          deep learning models for real-world industrial vision systems.
+        </p>
+
+        <p>
+          Most recently at DESION, I worked on semantic segmentation, multi-camera
+          vision pipelines, model integration, runtime evaluation, camera-related
+          debugging, and systematic failure analysis. Previously, at the Computer
+          Vision Lab in Würzburg, I worked on efficient deep learning, image
+          enhancement, multimodal vision, and systematic model evaluation.
+        </p>
+
+        <p>
+          I'm particularly interested in computer vision problems where research
+          ideas need to become reliable systems on real-world data.
+        </p>
+
+        <p class="interests">
+          <strong>Interests:</strong>
+          visual perception, semantic segmentation, real-time computer vision,
+          efficient deep learning, multimodal vision, robust model evaluation,
+          and applied AI.
+        </p>
 
         <div class="links">
-          <a href="https://scholar.google.com.tr/citations?user=sHKx7O4AAAAJ&hl=tr">Google Scholar</a> /
-          <a href="https://github.com/asilegrk" target="_blank">GitHub</a> /
-          <a href="https://www.linkedin.com/in/agrk/" target="_blank">LinkedIn</a> /
-          <a href="mailto:asilegrk@gmail.com">Mail</a>
+          <a href="https://scholar.google.com.tr/citations?user=sHKx7O4AAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+          /
+          <a href="https://github.com/asilegrk" target="_blank">
+            GitHub
+          </a>
+          /
+          <a href="https://www.linkedin.com/in/agrk/" target="_blank">
+            LinkedIn
+          </a>
+          /
+          <a href="mailto:asilegrk@gmail.com">
+            Email
+          </a>
         </div>
       </div>
 
       <div class="avatar">AG</div>
     </header>
 
+    <!-- ============================================================
+         NEWS
+    ============================================================ -->
+
     <section id="news">
       <h2>News</h2>
+
       <ul class="news">
         <li>
-          <span class="date">[Dec 2025]</span>
+          <span class="date">[Jul 2026 – Oct 2026]</span>
+          Computer Vision Engineer at DESION, working on industrial multi-camera
+          vision systems, semantic segmentation, model integration, and real-world
+          pipeline evaluation.
+        </li>
+
+        <li>
+          <span class="date">[Mar 2026]</span>
           Completed my M.Sc. in Computer Science at the University of Würzburg.
         </li>
+
         <li>
           <span class="date">[Sep 2023 – Jan 2026]</span>
-          Student Research Assistant at the Computer Vision Lab, University of Würzburg.
+          Computer Vision Researcher at the Computer Vision Lab,
+          University of Würzburg.
         </li>
       </ul>
     </section>
 
+    <!-- ============================================================
+         SELECTED WORK
+    ============================================================ -->
+
     <section id="projects">
-    <h2>Research</h2>
-  
-    <div class="project">
-      <h3>Portrait Image Color Enhancement</h3>
-      <p>
-        My master's thesis project
-      </p>
-      <p class="note">
-        Worked on a computer vision research project related to image enhancement, model evaluation, and efficient deep learning. 
-        Further details will be shared after publication.
-      </p>
-    </div>
-  
-    <div class="project">
-      <h3>Portrait Quality Assessment for Mobile Devices</h3>
-      <p>
-        Developed and trained deep learning models for Just-Noticeable Difference
-        score prediction in portrait images as part of the NTIRE 2024 Portrait
-        Quality Assessment challenge. The project involved portrait analysis,
-        face detection, feature extraction, and perceptual quality prediction.
-      </p>
-    </div>
-  
-    <div class="project">
-      <h3>Efficient Image Super-Resolution</h3>
-      <p>
-        Worked on improving an efficient image super-resolution model based on
-        the SeemoRe framework, focusing on lightweight model improvements,
-        expert-based feature merging, and high-resolution image restoration quality.
-      </p>
-    </div>
-  
-    <div class="project">
-      <h3>HQ Portrait Dataset Creation</h3>
-      <p>
-        Built a face detection and preprocessing pipeline to create a high-quality
-        portrait dataset from general image collections. The project focused on
-        automated face cropping, portrait framing, and dataset preparation for
-        future deep learning tasks.
-      </p>
-    </div>
-  </section>
+      <h2>Selected Work</h2>
 
+      <!-- DESION -->
+      <div class="project">
+        <h3>Industrial Vision Systems — DESION</h3>
+        <div class="meta">
+          Computer Vision Engineering · 2026
+        </div>
 
-  <section id="publications">
-    <h2>Publications</h2>
-  
-    <div class="publication">
-      <p>
-        <strong>AIM 2024 Challenge on UHD Blind Photo Quality Assessment</strong><br>
-        Vlad Hosu, et al. European Conference on Computer Vision Workshops
-        (ECCV Workshops), 2024.
-      </p>
-    </div>
-  
-    <div class="publication">
-      <p>
-        <strong>Master thesis manuscript</strong><br>
-        Asile Gerek. Submitted to IEEE ICIP 2026.
-      </p>
-    </div>
-  </section>
+        <p>
+          Worked on a production multi-camera computer vision system for industrial
+          inspection. My responsibilities included semantic segmentation, dataset
+          preparation, model adaptation, model integration, runtime evaluation,
+          and systematic analysis of failure cases on real production data.
+        </p>
 
-    
+        <p>
+          I also investigated camera acquisition, configuration, reconnect behavior,
+          exposure differences, geometry mismatches, and other system-level edge cases.
+          Trained models were integrated into the production pipeline using
+          GPU-based and ONNX inference.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Semantic Segmentation</span>
+          <span class="tag">Multi-Camera Vision</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">ONNX</span>
+          <span class="tag">CUDA</span>
+          <span class="tag">Failure Analysis</span>
+        </div>
+      </div>
+
+      <!-- PICE -->
+      <div class="project">
+        <h3>Portrait Instruction-Guided Color Enhancement (PICE)</h3>
+        <div class="meta">
+          Master's Thesis · University of Würzburg
+        </div>
+
+        <p>
+          Developed and evaluated a lightweight text-conditioned multimodal model
+          for high-resolution portrait enhancement using PyTorch and neural
+          3D-LUT supervision.
+        </p>
+
+        <p>
+          The project investigated efficient model design, natural-language
+          conditioning, different architecture variants, and systematic benchmarking
+          using reconstruction, perceptual, and color-quality metrics.
+        </p>
+
+        <p class="note">
+          The work focused on the trade-off between model capacity, image quality,
+          computational efficiency, and controllability.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Multimodal Vision</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">3D LUT</span>
+          <span class="tag">Efficient Deep Learning</span>
+          <span class="tag">Image Enhancement</span>
+          <span class="tag">Benchmarking</span>
+        </div>
+      </div>
+
+      <!-- SELF DRIVING -->
+      <div class="project">
+        <h3>Self-Driving Car Perception</h3>
+        <div class="meta">
+          Bachelor Thesis
+        </div>
+
+        <p>
+          Developed a real-time visual perception prototype for a small
+          autonomous-driving platform using OpenCV.
+        </p>
+
+        <p>
+          The system combined object detection, traffic-sign recognition,
+          lane detection, and real-time camera processing in a shared
+          perception pipeline.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Real-Time Vision</span>
+          <span class="tag">Object Detection</span>
+          <span class="tag">Lane Detection</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">Visual Perception</span>
+        </div>
+      </div>
+
+      <!-- SUPER RESOLUTION -->
+      <div class="project">
+        <h3>Efficient Image Super-Resolution</h3>
+        <div class="meta">
+          Computer Vision Research
+        </div>
+
+        <p>
+          Investigated lightweight image super-resolution architectures with
+          an emphasis on balancing reconstruction quality and computational cost.
+        </p>
+
+        <p>
+          The work included GPU-based training, controlled model comparisons,
+          quantitative evaluation, and analysis of model efficiency and
+          reconstruction artifacts.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Super-Resolution</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Lightweight Networks</span>
+          <span class="tag">Model Evaluation</span>
+        </div>
+      </div>
+
+      <!-- QUALITY -->
+      <div class="project">
+        <h3>Portrait Quality Assessment for Mobile Devices</h3>
+        <div class="meta">
+          NTIRE 2024
+        </div>
+
+        <p>
+          Developed and evaluated deep learning models for perceptual
+          image-quality prediction on portrait images.
+        </p>
+
+        <p>
+          The project involved deep feature extraction, portrait analysis,
+          quantitative benchmarking, and evaluation against perceptual
+          quality targets.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Image Quality Assessment</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Feature Extraction</span>
+          <span class="tag">Benchmarking</span>
+        </div>
+      </div>
+
+      <!-- DATASET -->
+      <div class="project">
+        <h3>High-Quality Portrait Dataset Creation</h3>
+        <div class="meta">
+          Data & Vision Pipeline
+        </div>
+
+        <p>
+          Built an automated face-detection and preprocessing pipeline for
+          constructing a high-quality portrait dataset from general image collections.
+        </p>
+
+        <p>
+          The pipeline included face detection, filtering, cropping,
+          portrait framing, and dataset preparation for downstream
+          deep learning experiments.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Dataset Engineering</span>
+          <span class="tag">Face Detection</span>
+          <span class="tag">Image Processing</span>
+          <span class="tag">Python</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         TECHNICAL SKILLS
+    ============================================================ -->
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-title">Programming</div>
+        <div class="skill-content">
+          Python, C++, C, Bash
+        </div>
+
+        <div class="skill-title">Deep Learning</div>
+        <div class="skill-content">
+          PyTorch, TorchVision, TensorFlow, Hugging Face
+        </div>
+
+        <div class="skill-title">Computer Vision</div>
+        <div class="skill-content">
+          Semantic Segmentation, Object Detection, Real-Time Vision,
+          Multi-Camera Vision, Image Processing, Image Enhancement,
+          Super-Resolution, Image Quality Assessment, Multimodal Vision
+        </div>
+
+        <div class="skill-title">Model Engineering</div>
+        <div class="skill-content">
+          Model Training, Dataset Preparation, Model Integration,
+          Ablation Studies, Benchmarking, Failure Analysis,
+          Lightweight Neural Networks, GPU Inference
+        </div>
+
+        <div class="skill-title">Tools</div>
+        <div class="skill-content">
+          OpenCV, CUDA, ONNX, NumPy, Linux, Git, CVAT, LabelMe, HPC, SLURM
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PUBLICATIONS
+    ============================================================ -->
+
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <div class="publication">
+        <p>
+          <strong>AIM 2024 Challenge on UHD Blind Photo Quality Assessment</strong><br>
+          Vlad Hosu, Marcos V. Conde, Lorenzo Agnolucci, et al.
+          <br>
+          <em>European Conference on Computer Vision Workshops (ECCV Workshops), 2024.</em>
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+
     <footer>
       © 2026 Asile Gerek
     </footer>
