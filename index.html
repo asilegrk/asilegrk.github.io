@@ -6,10 +6,10 @@
 
   <meta
     name="description"
-    content="Asile Gerek - Computer Vision Engineer and Researcher. Deep learning, visual perception, industrial vision, multimodal vision and efficient AI."
+    content="Asile Gerek - Computer Vision and AI Researcher working on deep learning, visual perception, efficient vision models, and real-world computer vision systems."
   />
 
-  <title>Asile Gerek | Computer Vision Engineer</title>
+  <title>Asile Gerek | Computer Vision & AI Researcher</title>
 
   <style>
     :root {
@@ -19,7 +19,6 @@
       --link: #2563eb;
       --border: #e5e7eb;
       --background: #ffffff;
-      --surface: #f9fafb;
       --tag-bg: #f3f4f6;
     }
 
@@ -154,14 +153,17 @@
     }
 
     .news li {
-      margin-bottom: 11px;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      column-gap: 14px;
+      align-items: start;
+      margin-bottom: 12px;
     }
 
     .date {
       font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
       font-size: 13.5px;
       color: var(--muted);
-      margin-right: 8px;
     }
 
     /* ============================================================
@@ -178,11 +180,6 @@
 
     .project p {
       margin-bottom: 10px;
-    }
-
-    .project ul {
-      margin-top: 7px;
-      margin-bottom: 8px;
     }
 
     .note {
@@ -277,6 +274,11 @@
         font-size: 18px;
       }
 
+      .news li {
+        grid-template-columns: 1fr;
+        row-gap: 3px;
+      }
+
       .skills-grid {
         grid-template-columns: 1fr;
         row-gap: 4px;
@@ -301,38 +303,32 @@
         <h1>Asile Gerek</h1>
 
         <p class="subtitle">
-          Computer Vision Engineer & Researcher
+          Computer Vision & AI Researcher
         </p>
 
         <p>
-          I'm a Computer Vision Engineer with an M.Sc. in Computer Science from the
-          University of Würzburg. My background combines more than two years of
-          computer vision research with hands-on experience developing and integrating
-          deep learning models for real-world industrial vision systems.
+          I'm a Computer Vision researcher with an M.Sc. in Computer Science from the
+          University of Würzburg. My background combines research in efficient deep
+          learning and visual AI with hands-on experience working on real-world
+          computer vision systems.
         </p>
 
         <p>
-          Most recently at DESION, I worked on semantic segmentation, multi-camera
-          vision pipelines, model integration, runtime evaluation, camera-related
-          debugging, and systematic failure analysis. Previously, at the Computer
-          Vision Lab in Würzburg, I worked on efficient deep learning, image
-          enhancement, multimodal vision, and systematic model evaluation.
-        </p>
-
-        <p>
-          I'm particularly interested in computer vision problems where research
-          ideas need to become reliable systems on real-world data.
+          My work spans image enhancement, multimodal vision, semantic segmentation,
+          model evaluation, and production vision pipelines.
         </p>
 
         <p class="interests">
           <strong>Interests:</strong>
-          visual perception, semantic segmentation, real-time computer vision,
-          efficient deep learning, multimodal vision, robust model evaluation,
-          and applied AI.
+          visual perception, efficient deep learning, multimodal vision,
+          real-time computer vision, robust model evaluation, and applied AI.
         </p>
 
         <div class="links">
-          <a href="https://scholar.google.com.tr/citations?user=sHKx7O4AAAAJ&hl=en" target="_blank">
+          <a
+            href="https://scholar.google.com.tr/citations?user=sHKx7O4AAAAJ&hl=en"
+            target="_blank"
+          >
             Google Scholar
           </a>
           /
@@ -363,20 +359,26 @@
       <ul class="news">
         <li>
           <span class="date">[Jul 2026 – Oct 2026]</span>
-          Computer Vision Engineer at DESION, working on industrial multi-camera
-          vision systems, semantic segmentation, model integration, and real-world
-          pipeline evaluation.
+          <span>
+            Computer Vision Engineer at DESION, working on industrial multi-camera
+            vision systems, semantic segmentation, model integration, and real-world
+            pipeline evaluation.
+          </span>
         </li>
 
         <li>
           <span class="date">[Mar 2026]</span>
-          Completed my M.Sc. in Computer Science at the University of Würzburg.
+          <span>
+            Completed my M.Sc. in Computer Science at the University of Würzburg.
+          </span>
         </li>
 
         <li>
           <span class="date">[Sep 2023 – Jan 2026]</span>
-          Computer Vision Researcher at the Computer Vision Lab,
-          University of Würzburg.
+          <span>
+            Computer Vision Researcher at the Computer Vision Lab,
+            University of Würzburg.
+          </span>
         </li>
       </ul>
     </section>
@@ -391,22 +393,22 @@
       <!-- DESION -->
       <div class="project">
         <h3>Industrial Vision Systems — DESION</h3>
+
         <div class="meta">
           Computer Vision Engineering · 2026
         </div>
 
         <p>
           Worked on a production multi-camera computer vision system for industrial
-          inspection. My responsibilities included semantic segmentation, dataset
-          preparation, model adaptation, model integration, runtime evaluation,
-          and systematic analysis of failure cases on real production data.
+          inspection, including semantic segmentation, dataset preparation,
+          model adaptation, integration, runtime evaluation, and failure analysis.
         </p>
 
         <p>
           I also investigated camera acquisition, configuration, reconnect behavior,
-          exposure differences, geometry mismatches, and other system-level edge cases.
-          Trained models were integrated into the production pipeline using
-          GPU-based and ONNX inference.
+          exposure differences, geometry mismatches, and system-level edge cases.
+          Models were integrated into the production pipeline using GPU-based and
+          ONNX inference.
         </p>
 
         <div class="tags">
@@ -423,6 +425,7 @@
       <!-- PICE -->
       <div class="project">
         <h3>Portrait Instruction-Guided Color Enhancement (PICE)</h3>
+
         <div class="meta">
           Master's Thesis · University of Würzburg
         </div>
@@ -434,14 +437,9 @@
         </p>
 
         <p>
-          The project investigated efficient model design, natural-language
-          conditioning, different architecture variants, and systematic benchmarking
-          using reconstruction, perceptual, and color-quality metrics.
-        </p>
-
-        <p class="note">
-          The work focused on the trade-off between model capacity, image quality,
-          computational efficiency, and controllability.
+          The work explored natural-language conditioning, efficient model design,
+          architecture variants, and systematic evaluation using reconstruction,
+          perceptual, and color-quality metrics.
         </p>
 
         <div class="tags">
@@ -457,6 +455,7 @@
       <!-- SELF DRIVING -->
       <div class="project">
         <h3>Self-Driving Car Perception</h3>
+
         <div class="meta">
           Bachelor Thesis
         </div>
@@ -468,8 +467,7 @@
 
         <p>
           The system combined object detection, traffic-sign recognition,
-          lane detection, and real-time camera processing in a shared
-          perception pipeline.
+          lane detection, and real-time camera processing.
         </p>
 
         <div class="tags">
@@ -484,19 +482,20 @@
       <!-- SUPER RESOLUTION -->
       <div class="project">
         <h3>Efficient Image Super-Resolution</h3>
+
         <div class="meta">
           Computer Vision Research
         </div>
 
         <p>
           Investigated lightweight image super-resolution architectures with
-          an emphasis on balancing reconstruction quality and computational cost.
+          emphasis on the balance between reconstruction quality and computational
+          efficiency.
         </p>
 
         <p>
           The work included GPU-based training, controlled model comparisons,
-          quantitative evaluation, and analysis of model efficiency and
-          reconstruction artifacts.
+          quantitative evaluation, and analysis of reconstruction artifacts.
         </p>
 
         <div class="tags">
@@ -510,6 +509,7 @@
       <!-- QUALITY -->
       <div class="project">
         <h3>Portrait Quality Assessment for Mobile Devices</h3>
+
         <div class="meta">
           NTIRE 2024
         </div>
@@ -520,9 +520,8 @@
         </p>
 
         <p>
-          The project involved deep feature extraction, portrait analysis,
-          quantitative benchmarking, and evaluation against perceptual
-          quality targets.
+          The work involved deep feature extraction, portrait analysis,
+          quantitative benchmarking, and perceptual quality evaluation.
         </p>
 
         <div class="tags">
@@ -536,6 +535,7 @@
       <!-- DATASET -->
       <div class="project">
         <h3>High-Quality Portrait Dataset Creation</h3>
+
         <div class="meta">
           Data & Vision Pipeline
         </div>
@@ -547,8 +547,7 @@
 
         <p>
           The pipeline included face detection, filtering, cropping,
-          portrait framing, and dataset preparation for downstream
-          deep learning experiments.
+          portrait framing, and dataset preparation for downstream deep learning tasks.
         </p>
 
         <div class="tags">
@@ -612,12 +611,13 @@
       <div class="publication">
         <p>
           <strong>AIM 2024 Challenge on UHD Blind Photo Quality Assessment</strong><br>
-          Vlad Hosu, Marcos V. Conde, Lorenzo Agnolucci, et al.
-          <br>
-          <em>European Conference on Computer Vision Workshops (ECCV Workshops), 2024.</em>
+          Vlad Hosu, Marcos V. Conde, Lorenzo Agnolucci, et al.<br>
+          <em>
+            European Conference on Computer Vision Workshops
+            (ECCV Workshops), 2024.
+          </em>
         </p>
       </div>
-
     </section>
 
     <!-- ============================================================
